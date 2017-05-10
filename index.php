@@ -6,10 +6,10 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<div style="padding: 0px 30px 0px 30px">
-		<img src="images/header.png"/>
+	<div style="padding: 0px 30px 0px 30px" align="center">
+		<img src="../images/header.PNG"/>
 	</div>
-	<div>
+	<div align="center">
 		<table>
 			<theader>
 				
@@ -26,8 +26,11 @@
 					if ($conn->connect_error) {
 						die("Connection failed: " . $conn->connect_error);
 					}
+					
 					$sql = "SELECT * from servicios";
+					
 					$result = $conn->query($sql);
+					
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {?>
 						<?php echo "<tr>"; ?>				
@@ -46,6 +49,9 @@
 				?> 
 			</tbody>
 		</table>
+	</div>
+	<div style="padding: 0px 30px 0px 30px" align="center">
+		<img src="../images/footer.PNG">
 	</div>
 </body>
 </html>
