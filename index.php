@@ -11,8 +11,11 @@
 	</div>
 	<div align="center">
 		<table>
-			<theader>
-				
+			<theader style="background-color: #bcbcbc">
+				<td align="center">Icono</td>
+				<td align="center">Codigo</td>
+				<td align="center">Nombre del Servicio</td>
+				<td align="center">Descripcion del servicio</td>				
 			</theader>
 			<tbody>
 				<?php
@@ -34,10 +37,10 @@
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()) {?>
 						<?php echo "<tr>"; ?>				
-						<?php echo "<td><img src=\"../", $row['imagen_servicio'], "\" /></td>"; ?>
-						<?php echo "<td>", $row['codigo_servicio'], "</td>"; ?>
-						<?php echo "<td>", $row['nombre_servicio'], "</td>"; ?>
-						<?php echo "<td>", $row['descripcion_servicio'], "</td>"; ?>
+						<?php echo "<td style=\"padding: 0px 30px 0px 30px\"><img src=\"../", $row['imagen_servicio'], "\" /></td>"; ?>
+						<?php echo "<td style=\"padding: 0px 30px 0px 30px\">", $row['codigo_servicio'], "</td>"; ?>
+						<?php echo "<td style=\"padding: 0px 30px 0px 30px\">", $row['nombre_servicio'], "</td>"; ?>
+						<?php echo "<td style=\"padding: 0px 30px 0px 30px\">", $row['descripcion_servicio'], "</td>"; ?>
 						<?php echo "</tr>"; ?>
 						<?php 
 						}
